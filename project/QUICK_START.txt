@@ -1,0 +1,32 @@
+QUICK START GUIDE - How to Run the Chess Game
+==============================================
+
+STEP 1: Install MSYS2
+----------------------
+1. Go to: https://www.msys2.org/
+2. Download the installer (msys2-x86_64-*.exe)
+3. Run the installer and follow the prompts
+4. When done, open "MSYS2 UCRT64" from Start Menu
+
+STEP 2: Install GCC and SDL2
+-----------------------------
+In the MSYS2 UCRT64 terminal, run:
+    pacman -Syu
+    pacman -S mingw-w64-ucrt-x86_64-gcc
+    pacman -S mingw-w64-ucrt-x86_64-SDL2
+
+STEP 3: Build the Game
+-----------------------
+In the MSYS2 UCRT64 terminal, run:
+    cd /c/Users/Stefan/Documents/project1/project
+    gcc -Wall -Wextra -std=c99 -o chess.exe chess.c -lSDL2
+
+STEP 4: Run the Game
+--------------------
+    ./chess.exe
+
+That's it! The game window should open.
+
+ALTERNATIVE: If you want to use PowerShell/CMD instead of MSYS2 terminal:
+1. Add C:\msys64\ucrt64\bin to your Windows PATH
+2. Then you can use PowerShell/CMD to build and run
