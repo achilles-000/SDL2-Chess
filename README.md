@@ -2,7 +2,6 @@
 
 A complete chess game implemented in C using SDL2 for Windows, featuring multiple game modes including AI opponents with adjustable difficulty.
 
-## 🎯 Features
 
 - **Complete Chess Rules**: All standard chess piece movements, check/checkmate detection, stalemate detection, pawn promotion, en passant
 - **Multiple Game Modes**:
@@ -21,24 +20,6 @@ A complete chess game implemented in C using SDL2 for Windows, featuring multipl
 - **SDL2_ttf** (for text rendering)
 - **SDL2_image** (for piece images, optional)
 
-## Installation & Building
-
-### Quick Setup (MSYS2)
-
-1. **Install MSYS2**: Download from https://www.msys2.org/
-2. **Install dependencies**:
-   ```bash
-   pacman -Syu
-   pacman -S mingw-w64-ucrt-x86_64-gcc
-   pacman -S mingw-w64-ucrt-x86_64-SDL2
-   pacman -S mingw-w64-ucrt-x86_64-SDL2_ttf
-   pacman -S mingw-w64-ucrt-x86_64-SDL2_image
-   ```
-3. **Build the game**:
-   ```bash
-   cd your-project-directory
-   .\build.bat
-   ```
 
 ## Game Modes & Controls
 
@@ -80,24 +61,6 @@ Use **Ctrl + Number** to switch game modes:
 - **Node counting**: Tracks positions evaluated per move
 - **Thinking delay**: 1-second pause between AI moves for better UX
 
-## File Structure
-
-```
-chess.c          # Main game logic and SDL rendering
-chess_ai.h       # AI engine header
-chess_ai.c       # AI implementation (minimax, evaluation)
-pieces/          # Optional piece image files
-build.bat        # Windows build script
-Makefile         # Alternative build configuration
-```
-
-## Piece Images (Optional)
-
-Place PNG files in the `pieces/` folder for custom piece graphics:
-- `white_pawn.png`, `white_rook.png`, etc.
-- `black_pawn.png`, `black_rook.png`, etc.
-
-If no images are found, the game uses Unicode chess symbols or simple shapes.
 
 ## Building from Source
 
@@ -106,14 +69,10 @@ If no images are found, the game uses Unicode chess symbols or simple shapes.
 gcc -Wall -Wextra -std=c99 -o chess.exe chess.c chess_ai.c -lmingw32 -lSDL2main -lSDL2 -lSDL2_ttf -lSDL2_image
 ```
 
-### Linux/Mac
-```bash
-gcc -Wall -Wextra -std=c99 -o chess chess.c chess_ai.c -lSDL2main -lSDL2 -lSDL2_ttf -lSDL2_image
-```
 
 ## Chess Rules Implemented
 
-✅ **All standard rules**:
+ **All standard rules**:
 - Piece movements (pawn, rook, knight, bishop, queen, king)
 - Check and checkmate detection
 - Stalemate detection
@@ -126,14 +85,7 @@ gcc -Wall -Wextra -std=c99 -o chess chess.c chess_ai.c -lSDL2main -lSDL2 -lSDL2_
 - **Easy (Depth 2)**: Basic tactical play, good for beginners
 - **Medium (Depth 4)**: Decent positional understanding
 - **Hard (Depth 6)**: Strong tactical and positional play
-- **Expert (Depth 8)**: Very challenging, requires precise play to win
-
-## Troubleshooting
-
-- **"gcc command not found"**: Add MSYS2 to your PATH or use full path to gcc.exe
-- **Missing DLLs**: Run `build.bat` which copies required DLLs automatically
-- **No piece images**: Game falls back to Unicode symbols or shapes
-- **AI too slow**: Reduce difficulty level or increase depth limit in code
+- **Expert (Depth 8)**: Very challenging, requires precise play to win but due to the nature of the engine will take much longer 
 
 ## Technical Notes
 
@@ -143,7 +95,7 @@ gcc -Wall -Wextra -std=c99 -o chess chess.c chess_ai.c -lSDL2main -lSDL2 -lSDL2_
 - **Memory safe**: No dynamic memory allocation during gameplay
 - **Extensible**: Easy to add features like castling, 50-move rule, etc.
 
-Enjoy playing chess against a challenging AI opponent! ♟️🤖
+Enjoy playing chess against a challenging AI opponent! 
 
 ## Chess Piece Images
 
