@@ -144,3 +144,11 @@ gcc -Wall -Wextra -std=c99 -o chess chess.c chess_ai.c -lSDL2main -lSDL2 -lSDL2_
 - **Extensible**: Easy to add features like castling, 50-move rule, etc.
 
 Enjoy playing chess against a challenging AI opponent! ♟️🤖
+
+## Chess Piece Images
+
+The chess piece images in the `pieces/` folder are derived from open source SVG chess pieces available under Creative Commons licenses from Wikimedia Commons. These images can be freely used, modified, and distributed.
+
+**Source**: [Wikimedia Commons - SVG Chess Pieces](https://commons.wikimedia.org/wiki/Category:SVG_chess_pieces)
+
+**License**: Files are available under licenses specified on their description page. All structured data from the file namespace is available under the Creative Commons CC0 License; all unstructured text is available under the Creative Commons Attribution-ShareAlike License; additional terms may apply.

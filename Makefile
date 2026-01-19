@@ -2,9 +2,9 @@
 
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c99
-LIBS = -lSDL2
+LIBS = -lmingw32 -lSDL2main -lSDL2 -lSDL2_ttf -lSDL2_image
 TARGET = chess.exe
-SRC = chess.c
+SRC = chess.c chess_ai.c
 
 # Default target
 all: $(TARGET)
